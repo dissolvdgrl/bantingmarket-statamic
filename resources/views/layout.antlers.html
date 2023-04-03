@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        {{ vite src="resources/js/app.js|resources/css/app.css" }}
+    </head>
+    <body class="bg-gray-100 font-sans leading-normal text-gray-800">
+        <div class="mx-auto px-2 flex flex-col items-center justify-center">
+            {{ template_content }}
+        </div>
+        <footer class="bg-gray-800 p-8">
+            <div class="container w-4/5 mx-auto text-center ">
+                <p class="text-white text-xl mb-8">Join us at Brooklyn Mall for the highest quality banting, keto and all kinds of LCHF foods. Gluten-free, wheat-free and sugar-free!</p>
+                <p class="text-white text sm">Brooklyn Mall is the new home for the Pretoria Banting Market, every first Saturday of the month.</p>
+                <div class="flex my-4 justify-center border-b border-white py-6">
+                    <a href="#" class="text-white transition-opacity duration-300 hover:opacity-60">Home</a>
+                    <span class="text-white mx-4">&mdash;</span>
+                </div>
+                <div class="flex justify-center md:justify-between flex-col md:flex-row">
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="https://www.facebook.com/bantingmarketpretoria123/" target="_blank">
+                            <img src="/images/facebook_icon.svg" alt="Facebook Icon">
+                        </a>
+                        <a href="https://www.instagram.com/bantingmarketpretoria/" target="_blank">
+                            <img src="/images/instagram_icon.svg" alt="Instagram Icon">
+                        </a>
+                    </div>
+                    <div class="mt-4 md:mt-0 md:text-right">
+                        <p class="text-white text-xs">Copyright © {{ date format="Y" }} Brooklyn's Banting Market.</p>
+                        <p class="text-white text-xs">Design & build by <a href="https://chilldsgn.com" target="_blank">CHD</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="{{ mix src='/js/site.js' }}"></script>
+    </body>
+</html>

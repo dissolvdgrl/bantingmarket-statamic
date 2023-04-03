@@ -1,0 +1,33 @@
+@import url(https://fonts.bunny.net/css?family=old-standard-tt:400,700);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: din_bold;
+    src: url(../fonts/urwdin-bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: din_regular;
+    src: url(../fonts/urwdin-regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: regular;
+}
+
+h1 {
+    font-family: 'Old Standard TT', serif;
+}
+
+p {
+    font-family: 'din_regular', sans-serif;
+}
+
+footer {
+    background-image: url(../images/flowers_footer.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
