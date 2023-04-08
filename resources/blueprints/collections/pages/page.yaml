@@ -1,0 +1,119 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: cards
+        field:
+          collapse: false
+          previews: true
+          sets:
+            card:
+              display: Card
+              fields:
+                -
+                  handle: small_heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Small Heading'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+                -
+                  handle: big_heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Big Heading'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+                -
+                  handle: card_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Card Text'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+                -
+                  handle: call_to_action
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Call To Action'
+                    type: text
+                    icon: text
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: url
+                  field:
+                    input_type: url
+                    antlers: false
+                    display: Url
+                    type: text
+                    icon: text
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: open_link_in_new_tab
+                  field:
+                    default: false
+                    display: 'Open link in new tab'
+                    type: toggle
+                    icon: toggle
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+          display: Cards
+          type: replicator
+          icon: replicator
+          instructions: 'Add some cards with info in them'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+title: Page

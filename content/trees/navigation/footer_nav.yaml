@@ -1,0 +1,28 @@
+tree:
+  -
+    id: baecfe12-ea13-4f3e-b8fc-6cfc0ade26eb
+    title: Home
+  -
+    id: 2f9e70b4-36bf-4b24-b812-540b029a5548
+    title: Store
+    url: 'https://store.bantingmarket.com'
+  -
+    id: 3a99aaf2-403d-45b8-aa23-4be705bfb69f
+    title: Info
+    url: /info
+  -
+    id: 1d3b80d3-3ece-4533-91c3-f5fe302cba6f
+    title: Recipes
+    url: /recipes
+  -
+    id: 03fca0be-7ae7-4ed5-bdcb-4003369d5f25
+    title: Vendors
+    url: /vendors
+  -
+    id: 3d1c7157-521a-4845-8686-264182673911
+    title: Apply
+    url: /apply
+  -
+    id: ea8b440d-9904-4dc4-9a62-b354eb099af7
+    title: Contact
+    url: /contact

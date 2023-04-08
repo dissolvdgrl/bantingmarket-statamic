@@ -18,12 +18,36 @@
     font-style: regular;
 }
 
-h1 {
+body {
+    background-image: url(../images/bg_blob.svg);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+h1, h2 {
     font-family: 'Old Standard TT', serif;
 }
 
 p {
     font-family: 'din_regular', sans-serif;
+}
+
+.link {
+    @apply text-dark-green font-bold;
+}
+
+.link::after {
+     content: "\2192";
+     margin-left: 0.25rem;
+     transition: all .2s ease-in;
+ }
+
+.link:hover::after {
+    margin-left: 0.5rem;
+}
+
+.button {
+    @apply bg-gray-800 p-4 text-white rounded-md font-din-bold text-xl;
 }
 
 footer {

@@ -1,8 +1,51 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: Home
+template: home
+cards:
+  -
+    id: lg2fbxg8
+    small_heading: 'How do I'
+    big_heading: 'get there?'
+    card_text: 'Brooklyn Mall Parkade Entrance 2, Veale St,Pretoria.'
+    call_to_action: 'Get directions'
+    url: 'https://goo.gl/maps/eyGdceu7MwPvCFJk6'
+    open_link_in_new_tab: true
+    type: card
+    enabled: true
+  -
+    id: lg2fcg6u
+    small_heading: 'Check out our'
+    big_heading: vendors
+    card_text: "We're radically anti-sugar and believe in real, clean foods made by local people."
+    call_to_action: 'See our vendors'
+    url: /vendors
+    open_link_in_new_tab: false
+    type: card
+    enabled: true
+  -
+    id: lg2fczs6
+    small_heading: 'Get regular'
+    big_heading: updates
+    card_text: 'Follow us on social media and sign up for the newsletter.'
+    call_to_action: 'Find out how'
+    url: /contact
+    open_link_in_new_tab: false
+    type: card
+    enabled: true
+  -
+    id: lg2fdqo1
+    small_heading: 'Want to sell'
+    big_heading: 'your goods'
+    card_text: 'Read our requirements and fill in the online application form.'
+    call_to_action: 'Get started'
+    url: /apply
+    open_link_in_new_tab: false
+    type: card
+    enabled: true
+updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
+updated_at: 1680622752
 ---
 ## Welcome to your brand new Statamic site!
 

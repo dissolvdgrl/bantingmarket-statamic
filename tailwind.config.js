@@ -6,7 +6,15 @@ module.exports = {
     './content/**/*.md'
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            serif: ['Old Standard TT', 'serif'],
+            'din-bold': ['din_bold'],
+        },
+        colors: {
+          'dark-green': '#7ba982',
+        },
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

@@ -1,8 +1,24 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-e3b0c442.css",
+    "file": "assets/app-074e7a13.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/fonts/urwdin-bold.ttf": {
+    "file": "assets/urwdin-bold-bbcc3c38.ttf",
+    "src": "resources/fonts/urwdin-bold.ttf"
+  },
+  "resources/fonts/urwdin-regular.ttf": {
+    "file": "assets/urwdin-regular-18989b15.ttf",
+    "src": "resources/fonts/urwdin-regular.ttf"
+  },
+  "resources/images/bg_blob.svg": {
+    "file": "assets/bg_blob-b609e526.svg",
+    "src": "resources/images/bg_blob.svg"
+  },
+  "resources/images/flowers_footer.svg": {
+    "file": "assets/flowers_footer-e0ca3f5e.svg",
+    "src": "resources/images/flowers_footer.svg"
   },
   "resources/js/app.js": {
     "file": "assets/app-4ed993c7.js",

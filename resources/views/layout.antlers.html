@@ -4,20 +4,54 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
+        <title>{{ title }} &mdash; {{ site:name }}</title>
+        <meta name="description" content="Pretoria Banting Market, every first Saturday of the month at Brooklyn Mall in Pretoria.">
         {{ vite src="resources/js/app.js|resources/css/app.css" }}
     </head>
-    <body class="bg-gray-100 font-sans leading-normal text-gray-800">
-        <div class="mx-auto px-2 flex flex-col items-center justify-center">
-            {{ template_content }}
+    <body class="relative">
+        <div class="bg-gray-800 sticky p-4">
+            <p class="uppercase font-bold text-white text-xl text-center tracking-widest">
+                Next Market: {{ next_market }}, 9am - 2pm
+            </p>
         </div>
-        <footer class="bg-gray-800 p-8">
-            <div class="container w-4/5 mx-auto text-center ">
+        <main class="p-4">
+            <nav>
+                <div class="container mx-auto flex items-center justify-between">
+                    <img src="{{ brand:logo }}" alt="{{ brand:logo:alt }}" class="w-24 mr-6">
+                    <ul class="flex justify-self-end gap-4">
+                        {{ nav handle="main_nav" include_home="true" }}
+                        <li>
+                            {{ if title === "Store"}}
+                                <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
+                                    {{ title }} <sup class="text-xs font-bold rounded-full bg-red-300 px-2 py-1">New!</sup>
+                                </a>
+                            {{ else }}
+                                <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
+                                    {{ title }}
+                                </a>
+                            {{ /if }}
+                        </li>
+                        {{ /nav }}
+                    </ul>
+                </div>
+            </nav>
+            <div class="container max-w-screen-xl mx-auto">
+                {{ template_content }}
+            </div>
+        </main>
+        <footer class="bg-gray-900 p-8">
+            <div class="container max-w-screen-xl mx-auto text-center ">
                 <p class="text-white text-xl mb-8">Join us at Brooklyn Mall for the highest quality banting, keto and all kinds of LCHF foods. Gluten-free, wheat-free and sugar-free!</p>
                 <p class="text-white text sm">Brooklyn Mall is the new home for the Pretoria Banting Market, every first Saturday of the month.</p>
-                <div class="flex my-4 justify-center border-b border-white py-6">
-                    <a href="#" class="text-white transition-opacity duration-300 hover:opacity-60">Home</a>
-                    <span class="text-white mx-4">&mdash;</span>
+                <div class="flex flex-col md:flex-row my-4 justify-center border-b border-white py-6">
+                    {{ nav handle="main_nav" include_home="true" }}
+                        <a href="{{ url }}" class="text-white transition-opacity duration-300 hover:opacity-60">
+                            {{ title }}
+                            {{ if count < 7 }}
+                            <span class="text-white mx-4 hidden md:inline">&mdash;</span>
+                            {{ /if }}
+                        </a>
+                    {{  /nav }}
                 </div>
                 <div class="flex justify-center md:justify-between flex-col md:flex-row">
                     <div class="flex gap-4 justify-center md:justify-start">
