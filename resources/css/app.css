@@ -47,7 +47,15 @@ p {
 }
 
 .button {
-    @apply bg-gray-800 p-4 text-white rounded-md font-din-bold text-xl;
+    @apply bg-gray-800 p-4 text-white rounded-md font-din-bold text-xl transition-shadow duration-300 shadow-xl hover:shadow-none;
+}
+
+.mc-field-group {
+    @apply flex flex-col;
+}
+
+.mc-field-group input {
+    @apply p-2;
 }
 
 footer {

@@ -16,9 +16,10 @@
         </div>
         <main class="p-4">
             <nav>
-                <div class="container mx-auto flex items-center justify-between">
+                <div class="container mx-auto flex items-center justify-between relative">
                     <img src="{{ brand:logo }}" alt="{{ brand:logo:alt }}" class="w-24 mr-6">
-                    <ul class="flex justify-self-end gap-4">
+                    <!-- Desktop Nav -->
+                    <ul class="hidden md:flex justify-self-end gap-4">
                         {{ nav handle="main_nav" include_home="true" }}
                         <li>
                             {{ if title === "Store"}}
@@ -33,6 +34,38 @@
                         </li>
                         {{ /nav }}
                     </ul>
+                    <!-- Mobile Nav -->
+                    <div x-data="{ open: false }" class="absolute top-0 right-0 w-full flex justify-end">
+                        <button class="button md:hidden relative z-50 fixed" @click="open = ! open">
+                            <span x-show="open">&times;</span>
+                            <span x-show="!open">Menu</span>
+                        </button>
+                        <div x-show="open" x-transition class="bg-gray-800 bg-opacity-95 rounded-md absolute top-0 z-40 w-full p-8">
+                            <ul class="flex flex-col justify-self-end gap-4 text-center">
+                                {{ nav handle="main_nav" include_home="true" }}
+                                    <li class="text-white text-2xl my-2 font-sans">
+                                        {{ if title === "Store"}}
+                                            <a
+                                                href="{{ url }}"
+                                                {{ if is_current || is_parent }} class="current"{{ /if }}
+                                            >
+                                                {{ title }}
+                                                <sup class="text-xs font-bold rounded-full bg-red-300 px-2 py-1">New!</sup>
+                                            </a>
+                                        {{ else }}
+                                            <a
+                                                href="{{ url }}"
+                                                {{ if is_current || is_parent }} class="current"{{ /if }}
+                                            >
+                                                {{ title }}
+                                            </a>
+                                        {{ /if }}
+                                    </li>
+                                {{ /nav }}
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </nav>
             <div class="container max-w-screen-xl mx-auto">
@@ -69,6 +102,6 @@
                 </div>
             </div>
         </footer>
-        <script src="{{ mix src='/js/site.js' }}"></script>
+        <script src="{{ mix src='/js/app.js' }}"></script>
     </body>
 </html>

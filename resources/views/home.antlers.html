@@ -13,7 +13,7 @@
 </div>
 
 <div class="my-64">
-    <h2 class="text-6xl font-bold text-center">Our vendors</h2>
+    <h2 class="text-6xl font-bold text-center mb-8">Our vendors</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
         {{ collection:vendors limit="3" }}
             <div class="bg-white shadow rounded-md flex flex-col items-center p-4">
@@ -26,8 +26,15 @@
             </div>
         {{ /collection:vendors }}
     </div>
-    <div class="flex items-center mt-16 justify-center gap-8">
+
+    <div class="flex flex-col md:flex-row items-center mt-16 justify-center gap-8">
         <a href="/apply" class="button">Apply to sell at the market</a>
         <a href="/vendors" class="link">View all vendors</a>
+    </div>
+
+    <div class="flex flex-col items-center mt-32 gap-8">
+        <p class="text-center uppercase tracking-widest">Stay up to date</p>
+        <h2 class="text-6xl font-bold text-center">Newsletter</h2>
+        {{ partial:newsletter }}
     </div>
 </div>
