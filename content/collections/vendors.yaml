@@ -11,3 +11,5 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+structure:
+  root: true

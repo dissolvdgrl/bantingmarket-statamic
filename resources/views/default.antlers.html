@@ -1,1 +1,17 @@
-{{ content }}
+{{ partial:header :heading="title" teaser="Brooklyn Mall, Pretoria" }}
+
+<div class="prose mx-auto">
+    {{ page_content }}
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 my-32 mx-auto">
+    {{ cards }}
+    <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">
+        <p class="text-sm">{{ small_heading }}</p>
+        <p class="font-serif font-bold text-xl uppercase">{{ big_heading }}</p>
+        <div class="border border-t-gray-900 w-16"></div>
+        <p class="my-4">{{ card_text }}</p>
+        <a href="{{ url }}" class="link mt-auto">{{ call_to_action }}</a>
+    </div>
+    {{ /cards }}
+</div>

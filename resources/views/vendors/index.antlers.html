@@ -1,0 +1,14 @@
+{{ partial:header heading="Vendors" teaser="The best local low-carb producers" cta_url="/apply" cta_text="Want to sell your goods?" }}
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 mt-32">
+    {{ collection:vendors limit="3" }}
+        <div class="bg-white shadow rounded-md flex flex-col items-center p-4">
+            <img src="{{ glide :src="vendor_logo" width="200" height="100" }}" alt="{{ vendor_logo:alt }}" />
+            <p class="font-din-bold text-2xl text-center mt-4">{{ title }}</p>
+            <div class="mt-4 text-center">{{ description }}</div>
+            {{ if website }}
+                <a href="{{ website }}" target="_blank" class="link mt-auto">Visit website</a>
+            {{ /if }}
+        </div>
+    {{ /collection:vendors }}
+</div>

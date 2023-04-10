@@ -9,6 +9,7 @@ module.exports = {
     extend: {
         fontFamily: {
             serif: ['Old Standard TT', 'serif'],
+            sans: ['din_regular', 'sans-serif'],
             'din-bold': ['din_bold'],
         },
         colors: {

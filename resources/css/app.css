@@ -18,6 +18,10 @@
     font-style: regular;
 }
 
+* {
+    font-size: 18px;
+}
+
 body {
     background-image: url(../images/bg_blob.svg);
     background-repeat: repeat-y;
@@ -48,6 +52,10 @@ p {
 
 .button {
     @apply bg-gray-800 p-4 text-white rounded-md font-din-bold text-xl transition-shadow duration-300 shadow-xl hover:shadow-none;
+}
+
+.current {
+    @apply font-din-bold;
 }
 
 .mc-field-group {

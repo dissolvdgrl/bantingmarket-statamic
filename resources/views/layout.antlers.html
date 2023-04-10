@@ -23,11 +23,11 @@
                         {{ nav handle="main_nav" include_home="true" }}
                         <li>
                             {{ if title === "Store"}}
-                                <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
+                                <a href="{{ url }}"{{ if is_current }} class="current"{{ /if }}>
                                     {{ title }} <sup class="text-xs font-bold rounded-full bg-red-300 px-2 py-1">New!</sup>
                                 </a>
                             {{ else }}
-                                <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
+                                <a href="{{ url }}"{{ if is_current  }} class="current"{{ /if }}>
                                     {{ title }}
                                 </a>
                             {{ /if }}
