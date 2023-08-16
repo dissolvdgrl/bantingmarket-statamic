@@ -18,10 +18,6 @@
     font-style: regular;
 }
 
-* {
-    font-size: 18px;
-}
-
 body {
     background-image: url(../images/bg_blob.svg);
     background-repeat: repeat-y;
@@ -50,6 +46,10 @@ p {
     margin-left: 0.5rem;
 }
 
+.link-white {
+    @apply text-white;
+}
+
 .button {
     @apply bg-gray-800 p-4 text-white rounded-md font-din-bold text-xl transition-shadow duration-300 shadow-xl hover:shadow-none;
 }
@@ -64,6 +64,10 @@ p {
 
 .mc-field-group input {
     @apply p-2;
+}
+
+.recipe-content h2 {
+    @apply text-5xl;
 }
 
 footer {

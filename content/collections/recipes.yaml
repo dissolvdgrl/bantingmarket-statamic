@@ -1,7 +1,7 @@
-title: Vendors
-template: vendors/index
+title: Recipes
+template: recipes/show
 layout: layout
-mount: d245a0bc-a8c1-4714-ac94-30240d50bf05
+mount: be551142-19ee-4440-a2ee-c35674271b3d
 revisions: false
 route: '/{mount}/{slug}'
 sort_dir: asc

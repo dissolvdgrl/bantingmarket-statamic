@@ -1,0 +1,156 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: stall_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Stall or Business Name'
+          type: text
+          icon: text
+          instructions: 'Enter your stall or business name'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: name_surname
+        field:
+          input_type: text
+          antlers: false
+          display: 'Your name & Surname'
+          type: text
+          icon: text
+          instructions: 'What is your name and surname?'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: mobile_phone_number
+        field:
+          input_type: tel
+          antlers: false
+          display: 'Mobile Phone Number'
+          type: text
+          icon: text
+          instructions: 'Pleae provide your mobile phone number so that we can contact you about your application and important market updates'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: email_address
+        field:
+          input_type: email
+          antlers: false
+          display: 'Email Address'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: website
+        field:
+          input_type: url
+          antlers: false
+          display: Website
+          type: text
+          icon: text
+          instructions: 'Please provide your website URL, if you have one'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: instagram_profile
+        field:
+          input_type: url
+          antlers: false
+          display: 'Instagram Profile'
+          type: text
+          icon: text
+          instructions: 'Please enter your Instagram page URL here, if you have one'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: facebook_page
+        field:
+          input_type: url
+          antlers: false
+          display: 'Facebook Page'
+          type: text
+          icon: text
+          instructions: 'Please enter the URL for your Facebook page, if you have one'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: produce_goods
+        field:
+          options:
+            'yes': 'Yes'
+            'no': 'No'
+          inline: false
+          cast_booleans: false
+          display: 'Do you produce your own goods?'
+          type: radio
+          icon: radio
+          instructions: 'Please indicate whether you produce your own goods'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: product_list
+        field:
+          antlers: false
+          display: 'Product list'
+          type: textarea
+          icon: textarea
+          instructions: 'List all the products that you would like to sell at the market including your ingredients. Please give as much information as possible. We will contact you for more information.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: stand_options
+        field:
+          options:
+            3x2: '3m x 2m stand'
+            3x2_elec: '3m x 2m stand with electricity'
+            3x2_gas: '3m x 2m stand with gas'
+          inline: false
+          cast_booleans: false
+          display: 'Stand Options'
+          type: radio
+          icon: radio
+          instructions: 'Please indicate whether you require just a stand or a stand with electricity, or whether you use gas at your stand'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: gas_compliance
+        field:
+          inline: false
+          display: 'Gas Compliance'
+          type: checkboxes
+          icon: checkboxes
+          instructions: 'I have read and understand the regulations of using gas and will adhere to it. Banting Market Management cannot be held responsible for any accident resulting from the improper and misuse of gas. If you use gas, a fire extinguisher is compulsory.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          if:
+            stand_options: 'contains 3x2_gas'

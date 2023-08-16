@@ -1,0 +1,22 @@
+{{ partial:header heading="Recipes" teaser="Delicious low carb recipes" cta_url="" cta_text="Healthy doesn't have to be bland" }}
+
+<div class="prose mx-auto mt-32">
+    {{ page_content }}
+    <div class="bg-white shadow p-4 rounded-md">
+        {{ form:application_form }}
+            {{ fields }}
+            <div class="mb-8">
+                <label class="text-sm font-din-bold">{{ display }}</label>
+                <div class="p-2 border-2 border-gray-200 rounded-md">{{ field }}</div>
+                {{ if error }}
+                    <p class="text-gray-500">{{ error }}</p>
+                {{ /if }}
+            </div>
+            {{ /fields }}
+            <input type="text" class="hidden" name="{{ honeypot ?? 'contact_number' }}">
+
+            <button type="submit" class="button">Submit</button>
+        {{ /form:application_form }}
+    </div>
+</div>
+
