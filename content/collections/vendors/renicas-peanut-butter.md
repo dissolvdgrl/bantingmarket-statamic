@@ -1,5 +1,6 @@
 ---
 id: 1a080672-b5ff-49a1-ace8-b18a1d17565d
+published: false
 blueprint: vendor
 title: "Renica's Peanut Butter"
 description: 'Made in Zimbabwe. Contains only peanuts and salt.'

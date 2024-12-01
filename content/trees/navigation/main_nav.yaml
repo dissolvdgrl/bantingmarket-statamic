@@ -4,10 +4,6 @@ tree:
     title: Home
     url: /
   -
-    id: 8cda579d-ba0b-457c-9d63-a29d23369521
-    title: Store
-    url: 'https://store.bantingmarket.com'
-  -
     id: c55b40de-38b2-4f09-a2ca-399a4608732b
     title: Info
     url: /info

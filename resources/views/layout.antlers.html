@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }} &mdash; {{ site:name }}</title>
-        <meta name="description" content="Pretoria Banting Market, every first Saturday of the month at Brooklyn Mall in Pretoria.">
+        <meta name="description" content="Pretoria Banting Market, every first Saturday of the month at the Pretoria Botanical Gardens">
         {{ vite src="resources/css/app.css" }}
     </head>
     <body class="relative">
         <div class="bg-gray-800 sticky p-4 gap-4 flex flex-col md:flex-row justify-center">
             <p class="uppercase font-bold text-white text-xl text-center tracking-widest">
-                <a href="https://store.bantingmarket.com/" class="link link-white" target="_blank">Shop online</a>
+                <a href="https://maps.app.goo.gl/HRZZnmm92HTJjmkD7" class="link link-white" target="_blank">New venue! Pretoria Botanical Gardens</a>
             </p>
             <span class="text-white hidden md:inline">|</span>
             <p class="uppercase font-bold text-white text-xl text-center tracking-widest">
@@ -26,15 +26,9 @@
                     <ul class="hidden md:flex justify-self-end gap-4">
                         {{ nav handle="main_nav" include_home="true" }}
                         <li>
-                            {{ if title === "Store"}}
-                                <a href="{{ url }}"{{ if is_current }} class="current"{{ /if }}>
-                                    {{ title }} <sup class="text-xs font-bold rounded-full bg-red-300 px-2 py-1">New!</sup>
-                                </a>
-                            {{ else }}
-                                <a href="{{ url }}"{{ if is_current  }} class="current"{{ /if }}>
-                                    {{ title }}
-                                </a>
-                            {{ /if }}
+                            <a href="{{ url }}"{{ if is_current  }} class="current"{{ /if }}>
+                                {{ title }}
+                            </a>
                         </li>
                         {{ /nav }}
                     </ul>
@@ -78,13 +72,13 @@
         </main>
         <footer class="bg-gray-900 p-8">
             <div class="container max-w-screen-xl mx-auto text-center ">
-                <p class="text-white text-xl mb-8">Join us at Brooklyn Mall for the highest quality banting, keto and all kinds of LCHF foods. Gluten-free, wheat-free and sugar-free!</p>
-                <p class="text-white text sm">Brooklyn Mall is the new home for the Pretoria Banting Market, every first Saturday of the month.</p>
+                <p class="text-white text-xl mb-8">Join us at the Pretoria Botanical Gardens for the highest quality banting, keto and all kinds of LCHF foods. Gluten-free, wheat-free and sugar-free!</p>
+                <p class="text-white text sm">Only every first Saturday of the month.</p>
                 <div class="flex flex-col md:flex-row my-4 justify-center border-b border-white py-6">
                     {{ nav handle="main_nav" include_home="true" }}
                         <a href="{{ url }}" class="text-white transition-opacity duration-300 hover:opacity-60">
                             {{ title }}
-                            {{ if count < 7 }}
+                            {{ if count < 6 }}
                             <span class="text-white mx-4 hidden md:inline">&mdash;</span>
                             {{ /if }}
                         </a>
@@ -100,8 +94,8 @@
                         </a>
                     </div>
                     <div class="mt-4 md:mt-0 md:text-right">
-                        <p class="text-white text-xs">Copyright © {{ date format="Y" }} Brooklyn's Banting Market.</p>
-                        <p class="text-white text-xs">Design & build by <a href="https://chilldsgn.com" target="_blank">CHD</a></p>
+                        <p class="text-white text-xs">Copyright © {{ date format="Y" }} Pretoria Banting Market.</p>
+                        <p class="text-white text-xs">Designed & built by <a href="https://chilldsgn.com" target="_blank">CHD</a></p>
                     </div>
                 </div>
             </div>
