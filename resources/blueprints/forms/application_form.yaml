@@ -154,3 +154,19 @@ sections:
           visibility: visible
           if:
             stand_options: 'contains 3x2_gas'
+      -
+        handle: trading_terms_and_conditions
+        field:
+          inline: false
+          options:
+            1: "I agree and accept the market's trading terms and conditions"
+          default: '1'
+          display: 'Trading terms and conditions'
+          type: checkboxes
+          icon: checkboxes
+          instructions: "Please make sure that you have read and understood the market's trading terms and conditions before submitting the form. By checking this box, you acknowledge and agree to the trading terms and conditions."
+          listable: hidden
+          instructions_position: below
+          visibility: visible
+          validate:
+            - required

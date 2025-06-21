@@ -3,7 +3,7 @@ id: 8ce61764-3e24-4f80-898f-bb83c46c65d9
 blueprint: page
 title: Info
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1681118480
+updated_at: 1733067320
 cards:
   -
     id: lgamhnzl
@@ -42,7 +42,7 @@ page_content:
     content:
       -
         type: text
-        text: "If you are a dedicated banter, trying to cut out sugar and high carbs, and embracing high fat foods, or just someone who strives to live a healthier lifestyle, Brooklyn's Banting Market located in Pretoria will cater for your needs."
+        text: 'If you are a dedicated banter, trying to cut out sugar and high carbs, and embracing high fat foods, or just someone who strives to live a healthier lifestyle, the Banting Market located in Pretoria, South Africa, will cater for your needs.'
   -
     type: heading
     attrs:

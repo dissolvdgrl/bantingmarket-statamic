@@ -8,9 +8,9 @@ cards:
     id: lg2fbxg8
     small_heading: 'How do I'
     big_heading: 'get there?'
-    card_text: 'Brooklyn Mall Parkade Entrance 2, Veale St,Pretoria.'
+    card_text: 'Pretoria Botanical Gardens'
     call_to_action: 'Get directions'
-    url: 'https://goo.gl/maps/eyGdceu7MwPvCFJk6'
+    url: 'https://maps.app.goo.gl/HRZZnmm92HTJjmkD7'
     open_link_in_new_tab: true
     type: card
     enabled: true
@@ -45,7 +45,15 @@ cards:
     type: card
     enabled: true
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1680622752
+updated_at: 1732946567
+teaser: 'Pretoria Botanical Gardens'
+page_content:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Your one-stop banting, keto and low carb market!'
 ---
 ## Welcome to your brand new Statamic site!
 
