@@ -1,5 +1,6 @@
 ---
 id: 5813dcd3-9cea-4999-891f-afc16b31b771
+published: false
 blueprint: vendor
 title: 'Life is Bantingful Cheesecakes'
 description: 'Banting cheesecake, quiches, lemon curd'

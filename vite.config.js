@@ -8,6 +8,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
             ],
+            transformOnServe: (code) => code.replaceAll('/images', 'http://localhost:8000/images'),
             refresh: true,
             detectTls: 'banting-market-statamic.test',
             server: {

@@ -15,3 +15,15 @@
     </div>
     {{ /cards }}
 </div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 my-32 mx-auto">
+    {{ collection:vendors  }}
+        <div>
+            <p>{{ title }}</p>
+            {{ market }}
+                {{ title }}
+            {{ /market }}
+        </div>
+    {{ /collection:vendors }}
+</div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::statamic('contact', 'contact', [
     'title' => 'Contact us'
 ]);
+
+Route::post('/contact', [ContactController::class, 'send'])->middleware('throttle:5,60');

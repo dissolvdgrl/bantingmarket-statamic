@@ -1,5 +1,72 @@
 {{ partial:header heading="Contact us" cta_text="Ask us anything" teaser="It's okay to have questions :)" }}
 
+<!---
+https://serversideup.net/laravel-hcaptcha-custom-validation-rule/
+https://github.com/hCaptcha/vanilla-hcaptcha
+https://docs.hcaptcha.com/
+-->
+<div class="flex gap-16 w-full">
+    <form action="/contact" method="POST" class="bg-white shadow-xl p-4 rounded-md w-3/4">
+        {{ csrf_field }}
+        <div class="bg-red-100 p-4 flex gap-4 text-xl rounded-md text-red-800">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+            </svg> Oops, you have some errors in your form. Please fix and try again.
+        </div>
+        <div id="cf_fn" class="form-group flex flex-col mt-4">
+            <label for="firstname" class="font-sansBold">Name <span class="required text-warning">*</span> </label>
+            <input type="text" id="firstname" name="firstname" class="border-b border-black mb-1" placeholder="Jane Smith" value="{{ old:firstname }}" autocomplete="off" required>
+            {{ get_error:firstname }}
+            <span class="inline-error">{{ message }}</span>
+            {{ /get_error:firstname }}
+        </div>
+        <div id="cf_email" class="form-group flex flex-col mt-4">
+            <label for="email_address" class="font-sansBold">Email address <span class="required text-warning">*</span> </label>
+            <input type="email" id="email_address" name="email_address" class="border-b border-black mb-1" placeholder="jane@example.com" value="{{ old:email_address }}" required>
+            {{ get_error:email_address }}
+            <span class="inline-error">{{ message }}</span>
+            {{ /get_error:email_address }}
+        </div>
+        <div id="cf_web" class="form-group flex flex-col mt-4">
+            <label for="website" class="font-sansBold">Website</label>
+            <input type="url" id="website" name="website" class="border-b border-black mb-1" placeholder="https://example.com" value="{{ old:website }}" autocomplete="off" tabindex="-1">
+        </div>
+        <div id="cf_cn" class="form-group flex flex-col mt-4">
+            <label for="contact_number" class="font-sansBold">Contact number <span class="required text-warning">*</span> </label>
+            <input type="tel" id="contact_number" name="contact_number" class="border-b border-black mb-1" placeholder="012 345 6789" value="{{ old:contact_number }}" required autocomplete="off">
+            {{ get_error:contact_number }}
+            <span class="inline-error">{{ message }}</span>
+            {{ /get_error:contact_number }}
+        </div>
+        <div id="cf_subj" class="form-group flex flex-col mt-4">
+            <label for="msg_subject" class="font-sansBold">Subject <span class="required text-warning">*</span> </label>
+            <input type="text" id="msg_subject" name="msg_subject" class="border-b border-black mb-1" placeholder="Question about parking" value="{{ old:msg_subject }}" required autocomplete="off">
+            {{ get_error:msg_subject }}
+            <span class="inline-error">{{ message }}</span>
+            {{ /get_error:msg_subject }}
+        </div>
+        <div id="cf_msg" class="form-group flex flex-col mt-4">
+            <label for="msg_body" class="font-sansBold">Message <span class="required text-warning">*</span> </label>
+            <textarea type="textarea" id="msg_body" name="msg_body" class="border-b border-black mb-1" placeholder="Please type your message here..." minlength="24" maxlength="300" required></textarea>
+            {{ get_error:msg_boy }}
+            <span class="inline-error">{{ message }}</span>
+            {{ /get_error:msg_boy }}
+        </div>
+
+        <div class="form-group flex flex-col mt-8 items-start">
+            <button type="submit" class="bg-gray-800 p-4 relative mt-6 shadow-xl rounded-md transition-shadow duration-300 hover:shadow-none text-white">Submit</button>
+        </div>
+    </form>
+
+    <div class=" w-1/4">
+        <p class="text-xl">Phone</p>
+        <p class="text-2xl font-serif font-bold leading-none">079 527 4902</p>
+        <p class="text-xl mt-8">Email</p>
+        <p class="text-2xl font-serif font-bold leading-none">karin@bantingmarket.com</p>
+    </div>
+
+</div>
+
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 my-64">
     {{ cards }}
         <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">

@@ -1,9 +1,9 @@
-<div class="max-w-5xl mx-auto mb-32 flex items-center gap-16">
-    <img src="{{ glide :src="image" }}" alt="{{ image:alt }}" class="shadow rounded-md" />
-    <div>
-        <a href="/recipes" class="link-back">Back</a>
-        <h2 class="text-6xl font-din-bold">{{ title }}</h2>
+<div class="max-w-5xl mx-auto relative flex h-96 justify-center overflow-hidden">
+    <div class="relative z-20 flex flex-col items-center w-auto my-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.40)]">
+        <a href="/recipes" class="link-back link-white">Back</a>
+        <h2 class="text-6xl text-white font-din-bold text-center uppercase">{{ title }}</h2>
     </div>
+    <img src="{{ glide :src="image" }}" alt="{{ image:alt }}" class="shadow rounded-md absolute inset-0 w-full" />
 </div>
 <div class="prose mx-auto recipe-content">
     {{ content }}

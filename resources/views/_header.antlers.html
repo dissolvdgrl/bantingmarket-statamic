@@ -1,14 +1,14 @@
-<header class="my-16 flex flex-col items-center">
-    <p class="mb-2 text-center uppercase tracking-widest">{{ teaser }}</p>
-    <h1 class="text-7xl font-bold text-center w-3/4">{{ heading }}</h1>
+<header class="my-16 flex flex-col items-center relative">
+    <p class="mb-2 text-xs lg:text-base text-center uppercase tracking-widest">{{ teaser }}</p>
+    <h1 class="text-4xl lg:text-7xl font-bold text-center w-3/4">{{ heading }}</h1>
     {{ if cta_text }}
         <div class="bg-gray-800 p-4 relative mt-6 shadow-xl rounded-md transition-shadow duration-300 hover:shadow-none">
             {{ if cta_url }}
                 <a class="text-white text-xl relative z-10 font-sans" href="{{ cta_url }}">{{ cta_text }}</a>
-                <img src="/images/flowers_2.svg" alt="" class="absolute -right-16 -top-4 w-24">
+                <img src="/images/flowers_2.svg" alt="" class="hidden lg:absolute -right-16 -top-4 w-24">
             {{ else }}
-                <p class="text-white text-xl relative z-10">{{ cta_text }}</p>
-                <img src="/images/flowers_2.svg" alt="" class="absolute -right-16 -top-4 w-24">
+                <p class="text-white text-xl relative z-10 text-center">{{ cta_text }}</p>
+                <img src="/images/flowers_2.svg" alt="" class="hidden lg:absolute -right-16 -top-4 w-24">
             {{ /if }}
         </div>
     {{ /if }}

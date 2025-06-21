@@ -6,5 +6,7 @@ description: 'Banting and diabetic friendly, ultra low carbohydrate almond bread
 vendor_logo: vendor-logos/low-carb-factory-logo.jpg
 website: 'http://www.lowcarbfactory.co.za/'
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1732957071
+updated_at: 1750522171
+market:
+  - menlyn-maine
 ---

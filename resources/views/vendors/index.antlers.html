@@ -1,15 +1,32 @@
 {{ partial:header heading="Vendors" teaser="The best local low-carb producers" cta_url="/apply" cta_text="Want to sell your goods?" }}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-16 mt-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-32">
     {{ collection:vendors }}
-        <div class="bg-white shadow rounded-md flex items-start gap-4 p-4">
-            <img src="{{ glide :src="vendor_logo" width="75" height="75" }}" alt="{{ vendor_logo:alt }}" class="rounded-full" />
+        <div class="bg-white shadow rounded-md flex flex-col items-start gap-4 p-4">
+            {{ if vendor_logo }}
+                <img src="{{ glide :src="vendor_logo" width="75" height="75" }}" alt="{{ vendor_logo:alt }}" class="rounded-full" />
+            {{ else }}
+                <div class="rounded-full h-12 w-12 bg-dark-green/20 text-dark-green flex items-center justify-center font-bold uppercase text-xl">
+                    {{ avatar :vendor="title" }}
+                </div>
+            {{ /if }}
             <div>
                 <p class="font-din-bold text-2xl mt-4">{{ title }}</p>
-                <div class="mt-4">{{ description }}</div>
                 {{ if website }}
-                    <a href="{{ website }}" target="_blank" class="link mt-auto">Visit website</a>
+                <a href="{{ website }}" target="_blank" class="link mt-auto">Visit website</a>
                 {{ /if }}
+
+                <div class="mt-4">{{ description }}</div>
+            </div>
+            <div class="mt-auto">
+                <p class="font-bold">Find me at: </p>
+                <div class="flex gap-1">
+                    {{ market }}
+                        <span class="text-xs bg-dark-green/20 font-bold rounded-full px-2 py-1">
+                            {{ title }}
+                        </span>
+                    {{ /market }}
+                </div>
             </div>
         </div>
     {{ /collection:vendors }}

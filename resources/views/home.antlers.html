@@ -1,26 +1,30 @@
 {{ partial:header heading="Your one-stop banting, keto and low carb market!" cta_text="Every first and last Saturday of the month" teaser="Only at Pretoria Boeremark & Menlyn Maine Central Square" }}
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 my-32">
-    <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">
-        <p class="text-sm">{{ next_market market="boeremark" }}</p>
-        <p class="font-bold text-3xl uppercase mb-2">Pretoria Boeremark</p>
-        <div class="border border-t-gray-900 w-16"></div>
-        <p class="my-4">Join us every first Saturday of the month at the Pretoria Boeremark from 05h30 to 09h30 for a vast selection of low carb and local products.</p>
-        <a href="/pretoria-boeremark" class="link mt-auto">click me bitch</a>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 my-16">
+    <div class="bg-market-card bg-boeremark">
+        <div>
+            <p class="text-sm">{{ next_market market="boeremark" }}</p>
+            <p class="font-bold text-3xl uppercase mb-2">Pretoria Boeremark</p>
+            <div class="border border-t-gray-900 w-16"></div>
+            <p class="my-4">Join us <span class="font-bold underline">every first Saturday of the month</span> at the Pretoria Boeremark from 05h30 to 09h30 for a vast selection of low carb and local products.</p>
+            <a href="/pretoria-boeremark" class="link link-white">See who's trading</a>
+        </div>
     </div>
-    <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">
-        <p class="text-sm">{{ next_market market="menlyn_maine" }}</p>
-        <p class="font-bold text-3xl uppercase mb-2">Menlyn Maine Central Square</p>
-        <div class="border border-t-gray-900 w-16"></div>
-        <p class="my-4">Join us every last Saturday of the month at Menlyn Maine Central Square from 9am to 1pm for a cozy selection of vendors in the East of Pretoria.</p>
-        <a href="/menlyn-maine" class="link mt-auto">click me bitch</a>
+    <div class="bg-market-card bg-menlyn-maine">
+        <div>
+            <p class="text-sm">{{ next_market market="menlyn_maine" }}</p>
+            <p class="font-bold text-3xl uppercase mb-2">Menlyn Maine Central Square</p>
+            <div class="border border-t-gray-900 w-16"></div>
+            <p class="my-4">Join us <span class="font-bold underline">every last Saturday of the month</span> at Menlyn Maine Central Square from 9am to 1pm for a cozy selection of vendors in the East of Pretoria.</p>
+            <a href="/menlyn-maine" class="link link-white">See who's trading</a>
+        </div>
     </div>
 </div>
 
-<div class="my-64">
+<div class="my-16">
     <div class="flex flex-col items-center mt-32 gap-8">
         <p class="text-center uppercase tracking-widest">Stay up to date</p>
-        <h2 class="text-6xl font-bold text-center">Newsletter</h2>
+        <h2 class="text-4xl lg:text-6xl font-bold text-center">Newsletter</h2>
         {{ partial:newsletter }}
     </div>
 </div>

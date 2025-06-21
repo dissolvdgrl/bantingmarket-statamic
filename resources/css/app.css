@@ -23,7 +23,7 @@
 }
 
 body {
-    background-image: url(../images/bg_blob.svg);
+    background-image: url('/images/bg_blob.svg');
     background-repeat: repeat-y;
     background-size: cover;
 }
@@ -38,6 +38,10 @@ p {
 
 .link {
     @apply text-dark-green font-bold;
+}
+
+.link-white {
+    @apply text-white;
 }
 
 .link::after {
@@ -84,12 +88,38 @@ p {
     @apply p-2;
 }
 
-.recipe-content h2 {
+.recipe-content div h2 strong {
     @apply text-5xl;
 }
 
 footer {
-    background-image: url(../images/flowers_footer.svg);
+    background-image: url('/images/flowers_footer.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#cf_web {
+    @apply opacity-0 overflow-hidden h-0 m-0;
+}
+
+.inline-error {
+    @apply text-red-500 font-bold;
+}
+
+.bg-market-card {
+    @apply h-96 bg-center shadow-xl rounded-md overflow-hidden;
+}
+
+.bg-market-card > div {
+    @apply bg-black/40 bg-blend-multiply p-4 h-full text-white flex flex-col justify-end;
+}
+
+
+.bg-boeremark {
+    background-image: url('/images/boeremark.jpg');
+}
+
+.bg-menlyn-maine {
+    background-image: url('/images/menlyn-maine.jpg');
+}
+

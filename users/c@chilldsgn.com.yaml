@@ -6,5 +6,9 @@ preferences:
   collections:
     recipes:
       after_save: create_another
-    recipes:
-      after_save: create_another
+    vendors:
+      columns:
+        - title
+        - slug
+        - status
+        - market

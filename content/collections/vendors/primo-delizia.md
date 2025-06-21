@@ -5,5 +5,7 @@ title: 'Primo Delizia'
 description: 'Drinking Custard, Almond Clusters, Seed Clusters, Ginger Lozenges, Lactose / Dairy Free Ice Cream'
 vendor_logo: vendor-logos/primo-delizia.jpg
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1732957732
+updated_at: 1750531072
+market:
+  - menlyn-maine
 ---

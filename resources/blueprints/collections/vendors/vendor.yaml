@@ -28,8 +28,6 @@ tabs:
               max_files: 1
               display: 'Vendor Logo'
               type: assets
-              validate:
-                - required
               width: 50
           -
             handle: website

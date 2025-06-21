@@ -26,7 +26,6 @@ page_content:
               target: null
               title: null
         text: 'https://maps.app.goo.gl/eDhxay3GN99zV6kZ8'
-template: default
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1748453787
+updated_at: 1750532191
 ---

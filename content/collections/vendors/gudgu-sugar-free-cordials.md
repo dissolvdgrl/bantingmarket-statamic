@@ -6,5 +6,8 @@ description: 'GUDGU (an Afrikaans acronym for Goedheid Uit Die Grond Uit meaning
 vendor_logo: vendor-logos/2023gudgulogo.webp
 website: 'https://www.gudgu.co.za/'
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1690470842
+updated_at: 1750531039
+market:
+  - boeremark
+  - menlyn-maine
 ---
