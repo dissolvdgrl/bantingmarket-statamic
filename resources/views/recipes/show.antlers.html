@@ -1,7 +1,22 @@
-<div class="max-w-[65ch] mx-auto mb-16">
-    <h2 class="text-6xl font-din-bold mb-8">{{ title }}</h2>
-    <img src="{{ glide :src="image" }}" alt="{{ image:alt }}" class="shadow-2xl" />
+<div class="max-w-5xl mx-auto mb-32 flex items-center gap-16">
+    <img src="{{ glide :src="image" }}" alt="{{ image:alt }}" class="shadow rounded-md" />
+    <div>
+        <a href="/recipes" class="link-back">Back</a>
+        <h2 class="text-6xl font-din-bold">{{ title }}</h2>
+    </div>
 </div>
 <div class="prose mx-auto recipe-content">
     {{ content }}
+        {{ if type == "text" }}
+            <div>
+                {{ text }}
+            </div>
+            {{ elseif type == "video_embed" }}
+                {{ if video | is_embeddable }}
+                    <div>
+                        <iframe src="{{ video | embed_url }}"class="w-full aspect-video"></iframe>
+                    </div>
+                {{ /if }}
+        {{ /if }}
+    {{ /content }}
 </div>

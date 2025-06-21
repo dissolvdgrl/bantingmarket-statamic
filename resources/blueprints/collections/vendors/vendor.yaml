@@ -1,66 +1,59 @@
 title: Vendor
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: description
-        field:
-          type: markdown
-          display: Description
-          localizable: true
-          instructions_position: above
-          listable: hidden
-          visibility: visible
-          container: assets
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: false
-          smartypants: false
-          antlers: false
-          validate:
-            - required
-      -
-        handle: vendor_logo
-        field:
-          mode: list
-          container: assets
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          max_files: 1
-          display: 'Vendor Logo'
-          type: assets
-          icon: assets
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: website
-        field:
-          input_type: url
-          antlers: false
-          display: Website
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              type: markdown
+              display: Description
+              localizable: true
+              container: assets
+              validate:
+                - required
+          -
+            handle: vendor_logo
+            field:
+              container: assets
+              max_files: 1
+              display: 'Vendor Logo'
+              type: assets
+              validate:
+                - required
+              width: 50
+          -
+            handle: website
+            field:
+              input_type: url
+              display: Website
+              type: text
+              width: 50
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: market
+            field:
+              type: terms
+              taxonomies:
+                - market
+              display: Market
+              mode: select

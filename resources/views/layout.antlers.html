@@ -9,15 +9,6 @@
         {{ vite src="resources/css/app.css" }}
     </head>
     <body class="relative">
-        <div class="bg-gray-800 sticky p-4 gap-4 flex flex-col md:flex-row justify-center">
-            <p class="uppercase font-bold text-white text-xl text-center tracking-widest">
-                <a href="https://store.bantingmarket.com/" class="link link-white" target="_blank">Shop online</a>
-            </p>
-            <span class="text-white hidden md:inline">|</span>
-            <p class="uppercase font-bold text-white text-xl text-center tracking-widest">
-                Next Market: {{ next_market }}, 9am - 2pm
-            </p>
-        </div>
         <main class="p-4">
             <nav>
                 <div class="container mx-auto flex items-center justify-between relative">
@@ -26,15 +17,9 @@
                     <ul class="hidden md:flex justify-self-end gap-4">
                         {{ nav handle="main_nav" include_home="true" }}
                         <li>
-                            {{ if title === "Store"}}
-                                <a href="{{ url }}"{{ if is_current }} class="current"{{ /if }}>
-                                    {{ title }} <sup class="text-xs font-bold rounded-full bg-red-300 px-2 py-1">New!</sup>
-                                </a>
-                            {{ else }}
-                                <a href="{{ url }}"{{ if is_current  }} class="current"{{ /if }}>
-                                    {{ title }}
-                                </a>
-                            {{ /if }}
+                            <a href="{{ url }}"{{ if is_current  }} class="current"{{ /if }}>
+                                {{ title }}
+                            </a>
                         </li>
                         {{ /nav }}
                     </ul>
@@ -48,22 +33,12 @@
                             <ul class="flex flex-col justify-self-end gap-4 text-center">
                                 {{ nav handle="main_nav" include_home="true" }}
                                     <li class="text-white text-2xl my-2 font-sans">
-                                        {{ if title === "Store"}}
-                                            <a
-                                                href="{{ url }}"
-                                                {{ if is_current || is_parent }} class="current"{{ /if }}
-                                            >
-                                                {{ title }}
-                                                <sup class="text-xs font-bold rounded-full bg-red-300 px-2 py-1">New!</sup>
-                                            </a>
-                                        {{ else }}
-                                            <a
-                                                href="{{ url }}"
-                                                {{ if is_current || is_parent }} class="current"{{ /if }}
-                                            >
-                                                {{ title }}
-                                            </a>
-                                        {{ /if }}
+                                        <a
+                                            href="{{ url }}"
+                                            {{ if is_current || is_parent }} class="current"{{ /if }}
+                                        >
+                                            {{ title }}
+                                        </a>
                                     </li>
                                 {{ /nav }}
                             </ul>
@@ -106,6 +81,7 @@
                 </div>
             </div>
         </footer>
+        {{ livewire:scripts }}
         {{ vite src='resources/js/app.js' }}
     </body>
 </html>

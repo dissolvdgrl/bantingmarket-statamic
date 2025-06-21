@@ -6,3 +6,5 @@ preferences:
   collections:
     vendors:
       after_save: create_another
+    recipes:
+      after_save: create_another

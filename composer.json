@@ -9,21 +9,21 @@
     ],
     "type": "project",
     "require": {
-        "php": "^8.2",
-        "fruitcake/laravel-cors": "^2.0.5",
+        "php": "^8.3",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.0",
+        "marcorieser/statamic-livewire": "^4.0",
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.7",
-        "statamic/cms": "3.4.*",
-        "laravel/sanctum": "^2.14"
+        "statamic/cms": "^5.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0",
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.0",
+        "spatie/laravel-ignition": "^2.0",
         "laravel/sail": "^1.13"
     },
     "config": {
@@ -52,7 +52,7 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "scripts": {
         "pre-update-cmd": [

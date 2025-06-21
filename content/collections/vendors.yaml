@@ -2,6 +2,8 @@ title: Vendors
 template: vendors/index
 layout: layout
 mount: d245a0bc-a8c1-4714-ac94-30240d50bf05
+taxonomies:
+  - market
 revisions: false
 route: '/{mount}/{slug}'
 sort_dir: asc
@@ -12,3 +14,4 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+    refresh: true

@@ -6,5 +6,8 @@ description: 'Banting ice cream, with no added sugar, sweetened with xylitol. Fr
 vendor_logo: vendor-logos/the-ice-creamery-logo.png
 website: 'https://theicecreamery.co.za/'
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1680621500
+updated_at: 1748281746
+market:
+  - menlyn-maine
+  - boeremark
 ---

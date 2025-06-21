@@ -52,6 +52,19 @@ sections:
           visibility: visible
           validate:
             - required
+          sets:
+            video_embed:
+              display: 'Video Embed'
+              fields:
+                -
+                  handle: video
+                  field:
+                    display: Video
+                    type: video
+                    icon: video
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
   sidebar:
     display: Sidebar
     fields:

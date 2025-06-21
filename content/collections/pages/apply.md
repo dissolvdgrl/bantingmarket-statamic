@@ -5,7 +5,9 @@ title: Apply
 teaser: "Apply now to sell your products at Brooklyn's Banting Market"
 page_content:
   -
-    type: paragraph
+    type: heading
+    attrs:
+      level: 2
     content:
       -
         type: text
@@ -15,7 +17,13 @@ page_content:
     content:
       -
         type: text
-        text: 'Please read carefully, we will disqualify any application without notice which does not adhere to our guidelines. By submitting the application form, you agree to comply with all market rules and regulations. Noncompliance may result in a termination of your acceptance to trade at the market.'
+        marks:
+          -
+            type: bold
+        text: 'Please read carefully'
+      -
+        type: text
+        text: ', we will disqualify any application without notice which does not adhere to our guidelines. By submitting the application form, you agree to comply with all market rules and regulations. Noncompliance may result in a termination of your acceptance to trade at the market.'
   -
     type: paragraph
     content:
@@ -24,5 +32,5 @@ page_content:
         text: "Once you've gone through the rules, you can submit the form."
 template: apply
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1682242015
+updated_at: 1693071628
 ---

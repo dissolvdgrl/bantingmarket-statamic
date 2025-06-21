@@ -1,37 +1,23 @@
-{{ partial:header heading="Your one-stop banting, keto and low carb market!" cta_text="Every 1st Saturday of the month" teaser="Brooklyn Mall, Pretoria" }}
+{{ partial:header heading="Your one-stop banting, keto and low carb market!" cta_text="Every first and last Saturday of the month" teaser="Only at Pretoria Boeremark & Menlyn Maine Central Square" }}
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 my-64">
-    {{ cards }}
-        <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">
-            <p class="text-sm">{{ small_heading }}</p>
-            <p class="font-serif font-bold text-xl uppercase">{{ big_heading }}</p>
-            <div class="border border-t-gray-900 w-16"></div>
-            <p class="my-4">{{ card_text }}</p>
-            <a href="{{ url }}" class="link mt-auto">{{ call_to_action }}</a>
-        </div>
-    {{ /cards }}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 my-32">
+    <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">
+        <p class="text-sm">{{ next_market market="boeremark" }}</p>
+        <p class="font-bold text-3xl uppercase mb-2">Pretoria Boeremark</p>
+        <div class="border border-t-gray-900 w-16"></div>
+        <p class="my-4">Join us every first Saturday of the month at the Pretoria Boeremark from 05h30 to 09h30 for a vast selection of low carb and local products.</p>
+        <a href="/pretoria-boeremark" class="link mt-auto">click me bitch</a>
+    </div>
+    <div class="bg-white shadow-xl p-4 flex flex-col justify-start rounded-md">
+        <p class="text-sm">{{ next_market market="menlyn_maine" }}</p>
+        <p class="font-bold text-3xl uppercase mb-2">Menlyn Maine Central Square</p>
+        <div class="border border-t-gray-900 w-16"></div>
+        <p class="my-4">Join us every last Saturday of the month at Menlyn Maine Central Square from 9am to 1pm for a cozy selection of vendors in the East of Pretoria.</p>
+        <a href="/menlyn-maine" class="link mt-auto">click me bitch</a>
+    </div>
 </div>
 
 <div class="my-64">
-    <h2 class="text-6xl font-bold text-center mb-8">Our vendors</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-        {{ collection:vendors limit="3" }}
-            <div class="bg-white shadow rounded-md flex flex-col items-center p-4">
-                <img src="{{ glide :src="vendor_logo" width="200" height="100" }}" alt="{{ vendor_logo:alt }}" />
-                <p class="font-din-bold text-2xl text-center mt-4">{{ title }}</p>
-                <div class="mt-4 text-center">{{ description }}</div>
-                {{ if website }}
-                    <a href="{{ website }}" target="_blank" class="link mt-auto">Visit website</a>
-                {{ /if }}
-            </div>
-        {{ /collection:vendors }}
-    </div>
-
-    <div class="flex flex-col md:flex-row items-center mt-16 justify-center gap-8">
-        <a href="/apply" class="button">Apply to sell at the market</a>
-        <a href="/vendors" class="link">View all vendors</a>
-    </div>
-
     <div class="flex flex-col items-center mt-32 gap-8">
         <p class="text-center uppercase tracking-widest">Stay up to date</p>
         <h2 class="text-6xl font-bold text-center">Newsletter</h2>
