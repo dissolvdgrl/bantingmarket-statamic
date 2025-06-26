@@ -28,5 +28,8 @@ page_content:
         text: 'https://maps.app.goo.gl/cbydYoL4Y2Bw3jzv7'
 template: default
 updated_by: 51d5f7f5-63e9-492c-92f4-4863914f59eb
-updated_at: 1748453620
+updated_at: 1750580828
+display_vendors: true
+select_market_vendors:
+  - menlyn-maine
 ---

@@ -134,3 +134,18 @@ tabs:
             field:
               display: Template
               type: template
+          -
+            handle: display_vendors
+            field:
+              type: toggle
+              display: 'Display vendors'
+          -
+            handle: select_market_vendors
+            field:
+              taxonomies:
+                - market
+              type: terms
+              display: 'Select Market Vendors'
+              validate:
+                - 'required_if:display_vendors,true'
+              mode: select

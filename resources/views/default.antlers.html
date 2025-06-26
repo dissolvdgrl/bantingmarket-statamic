@@ -11,19 +11,31 @@
         <p class="font-serif font-bold text-xl uppercase">{{ big_heading }}</p>
         <div class="border border-t-gray-900 w-16"></div>
         <p class="my-4">{{ card_text }}</p>
-        <a href="{{ url }}" class="link mt-auto">{{ call_to_action }}</a>
+        <a href="{{ url }}" class="link mt-auto" {{ if open_link_in_new_tab }} target="_blank" {{ /if }}>{{ call_to_action }}</a>
     </div>
     {{ /cards }}
 </div>
 
-
+{{ if display_vendors == 1 }}
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 my-32 mx-auto">
-    {{ collection:vendors  }}
-        <div>
-            <p>{{ title }}</p>
-            {{ market }}
-                {{ title }}
-            {{ /market }}
+    {{ collection:vendors taxonomy:market="{select_market_vendors}" }}
+    <div class="bg-white shadow rounded-md flex flex-col items-start gap-4 p-4">
+        {{ if vendor_logo }}
+        <img src="{{ glide :src="vendor_logo" width="75" height="75" }}" alt="{{ vendor_logo:alt }}" class="rounded-full" />
+        {{ else }}
+        <div class="rounded-full h-12 w-12 bg-dark-green/20 text-dark-green flex items-center justify-center font-bold uppercase text-xl">
+            {{ avatar :vendor="title" }}
         </div>
+        {{ /if }}
+        <div>
+            <p class="font-din-bold text-2xl mt-4">{{ title }}</p>
+            {{ if website }}
+            <a href="{{ website }}" target="_blank" class="link mt-auto">Visit website</a>
+            {{ /if }}
+
+            <div class="mt-4">{{ description }}</div>
+        </div>
+    </div>
     {{ /collection:vendors }}
 </div>
+{{ /if }}

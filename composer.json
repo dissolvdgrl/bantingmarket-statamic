@@ -11,10 +11,11 @@
     "require": {
         "php": "^8.3",
         "guzzlehttp/guzzle": "^7.2",
-        "marcorieser/statamic-livewire": "^4.0",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.7",
+        "livewire/livewire": "^3.6",
+        "marcorieser/statamic-livewire": "^4.0",
         "statamic/cms": "^5.0"
     },
     "require-dev": {
